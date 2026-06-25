@@ -77,5 +77,6 @@ ENV BOOT="mint"
 ENV CPU_CORES="2"
 ENV RAM_SIZE="12G"
 ENV DISK_SIZE="64G"
+ENV KVM="N"
 
 ENTRYPOINT ["/usr/bin/tini", "-s", "/run/entry.sh"]
