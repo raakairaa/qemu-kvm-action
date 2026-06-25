@@ -70,12 +70,12 @@ COPY --chmod=744 ./web/conf/nginx.conf /etc/nginx/default.conf
 
 ADD --chmod=755 "https://github.com/qemus/fiano/releases/download/v${VERSION_UTK}/utk_${VERSION_UTK}_${TARGETARCH}.bin" /run/utk.bin
 
-VOLUME /storage
+# VOLUME /storage
 EXPOSE 22 5900 8006
 
-ENV BOOT="alpine"
+ENV BOOT="mint"
 ENV CPU_CORES="2"
-ENV RAM_SIZE="2G"
+ENV RAM_SIZE="12G"
 ENV DISK_SIZE="64G"
 
 ENTRYPOINT ["/usr/bin/tini", "-s", "/run/entry.sh"]
